@@ -4,12 +4,20 @@ body{
     background: #111;
     color: white;
     text-align: center;
+    background: radial-gradient(circle at top right, #1e293b, #020617);
 }
 
-header{
-    background: #222;
-    padding: 40px;
-    text-align: center;
+#home{
+    z-index: 4;
+}
+#aboutMe{
+    z-index: 3;
+}
+#projects{
+    z-index: 2;
+}
+#contacts{
+    z-index: 1;
 }
 
 section{
@@ -18,15 +26,110 @@ section{
     margin: auto;
 }
 
-.card{
-    background: #1e293b;
-    padding: 20px;
-    margin: 15px 0;
-    border-radius: 10px;
+.active{
+    display: block;
 }
 
-footer{
-    text-align: center;
-    padding: 20px;
-    background: #020617;
+.card{
+    position: absolute;
+    width: 400px;
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: o 10px 30px rgba(0, 0, 0, 0);
+    opacity: 0;
+    transform: translate(20px) scale(0.95);
+    pointer-events: none;
+    transition: all 0.4s ease;
 }
+
+.project-card{
+    margin-top: 15px;
+    padding: 15px;
+    background: #020617;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.project-card:hover{
+    transform: translate(-5px);
+}
+
+.card.active{
+    opacity: 1;
+    transform: translate(0) scale(1);
+    pointer-events: auto;
+}
+
+.card:hover{
+    transform: scale(1.03);
+}
+
+.container{
+    display: flex;
+    height: 100vh;
+}
+
+/* side bar */
+.sidebar{
+    width: 250px;
+    background: #020617;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.profile{
+    width: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.title{
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+.goal{
+    font-size: 13px;
+    margin-bottom: 20px;
+    color: #38bdf8;
+}
+
+.sidebar a {
+    display: block;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+/* right side*/
+.content{
+    position: relative;
+    flex: 1;
+    display: flex;
+    padding: 40px;
+    background: #0f172a;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-nav{
+    position: absolute;
+    top: 20px;
+    right: 40px;
+}
+
+.top-nav button{
+    background: #1e293b;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.top-nav button.active-btn{
+    background: #2563eb;
+}
+
+
+

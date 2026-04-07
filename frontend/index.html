@@ -7,43 +7,95 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <header>
-            <h1>Bongani Maluleke</h1>
-            <p>Computer Science Student | Aspiring Software Engineer</p>
-        </header>
-        
-        <section id="aboutMe">
-            <h2>About Me</h2>
-            <p>My name is Bongani Maluleke, and I am a second-year Computer Science student at the University of the Western Cape.
-                 I am passionate about software development and enjoy building web applications that solve real-world problems. 
-                 I have experience working with HTML, CSS, and JavaScript, and I am currently improving my skills in full-stack development through hands-on projects. 
-                 These include my Budget Boss web application and a client management system I am developing as part of my learning journey. 
-                 I am a motivated and curious learner who enjoys problem-solving and continuously improving my skills.
-                  My goal is to grow into a professional software engineer and eventually become a software architect.
-            </p>
-        </section>
+        <div class="container">
 
-        <section id="projects">
-            <h2>My Projects</h2>
-            <div class="card">
-                <h3>Budget Boss(in Progress)</h3>
+            <!--Creating a side bar-->
+            <aside class="sidebar">
+                <img src="images/profile.jpg" alt="Profile Picture" class="profile">
+                <h2>Bongani Maluleke</h2>
+                <p class="title">BSc Computer Science Student</p>
+                <p class="goal"> 🚀Future Software Architect </p>
 
-                <p>Budget Boss is a personal finance web application that I developed to help users manage their money more effectively. 
-                    The application allows users to add income and expenses, categorize transactions, and view their overall financial balance. It provides a simple and user-friendly interface to track spending habits and encourages better financial decision-making.
-                    I built this project using HTML, CSS, and JavaScript, focusing on creating a clean design and interactive user experience.
-                </p>
-            </div>
-        </section>
+                
+                
+            </aside>
 
-        <section id="contacts">
-            <h2>Contact Details</h2>
-            <p>Email: bonganimaluleka572@gmail.com</p>
-            <p>GitHub: <a href="https://github.com/De-Bongz">My GitHub</a> </p>
-        </section>
 
-        <footer>
-            <p>&copy; 2026 Bongani Maluleke</p>
-        </footer>
+            <!--Right content-->
+            <main class="content">
+                <nav class="top-nav">
+                    <button onclick="showSection('home', this)">Home</button>
+                    <button onclick="showSection('aboutMe', this)">About Me</button>
+                    <button onclick="showSection('projects', this)">My Projects</button>
+                    <button onclick="showSection('contacts', this)">Contacts</button>
+                </nav>
+                <section id="home" class="card active">
+                    <h2>Hello, I'm Bongani 👋🏿</h2>
+                    <p>
+                        A Computer Science student at the University of the Western Cape with a strong interest in software development and systems.
+                    </p>
+                    <p>
+                        I Build responsive web applications and enjoy working with mordern tecnologies to solve real-world problems.
+                    </p>
+                    <p>
+                        Currently focused on improving my skills in full-stack development, building real-world projects and seeking an internship opportunity to gain industry experience and grow as a software engineer.
+                    </p>
+
+                    <a href="https://github.com/De-Bongz" target="_blank" class="btn">View My GitHub</a>
+                </section>
+
+                <section id="aboutMe" class="card">
+                    <h2>About Me</h2>
+                    <p>My name is Bongani Maluleke, and I am a second-year Computer Science student at the University of the Western Cape, expected to graduate in 2027.</p>
+
+                    <p>
+                        I have a strong foundation in programming and problem-solving, with experience in building
+                        frontend applications and working in Linux-based environments.
+                    </p>
+
+                    <p>
+                        My coursework includes Data Structures & Algorithms, Statistics, Calculus, and Information Systems,
+                        which have strengthened my analytical and technical skills.
+                    </p>
+
+                    <h3>Technical Skills</h3>
+                    <ul>
+                        <li><strong>Languages:</strong> Java, JavaScript, HTML, CSS, Python (basic)</li>
+                        <li><strong>Tools:</strong> Git, GitHub, Linux (Ubuntu), VS Code</li>
+                        <li><strong>Concepts:</strong> Data Structures, Problem Solving, Frontend Development</li>
+                    </ul>
+
+                    <h3>Experience with Linux</h3>
+                    <p>
+                        Comfortable working in Linux environments using terminal commands, including file management,
+                        package installation, and system navigation.
+                    </p>
+                </section>
+
+                <section id="projects" class="card">
+                    <h2>My Projects</h2>
+                    <div class="project-card">
+                        <h3>Budget Boss(in Progress)</h3>
+
+                        <p>Budget Boss is a personal finance web application that I developed to help users manage their money more effectively. 
+                            The application allows users to add income and expenses, categorize transactions, and view their overall financial balance. It provides a simple and user-friendly interface to track spending habits and encourages better financial decision-making.
+                            I built this project using HTML, CSS, and JavaScript, focusing on creating a clean design and interactive user experience.
+                        </p>
+                        <p><strong>Technoligies:</strong> HTML, CSS, JavaScript</p>
+                        <p><a href="https://github.com/De-Bongz/Budget-Boss-app" target="_blank">View Project on GitHub</a></p>
+                        <p><a href="https://de-bongz.github.io/Budget-Boss-app/" target="_blank">LIve Demo</a></p>
+                    </div>
+                </section>
+
+                <section id="contacts" class="card">
+                    <h2>Contact Details</h2>
+                    <p><strong>Email:</strong> bonganimaluleka572@gmail.com</p>
+                    <p><strong>Phone:</strong> 067 320 4810</p>
+                    <p><strong>GitHub:</strong> <a href="https://github.com/De-Bongz" target="_blank">My GitHub</a> </p>
+                    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/bongani-maluleke-4a779a3b1" target="_blank">visit my linkedIn</a></p>
+                </section>
+                
+            </main>
 
         <script src="script.js"></script>
     </body>
