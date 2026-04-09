@@ -36,7 +36,7 @@ section{
     background: #1e293b;
     padding: 30px;
     border-radius: 15px;
-    box-shadow: o 10px 30px rgba(0, 0, 0, 0);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     opacity: 0;
     transform: translate(20px) scale(0.95);
     pointer-events: none;
@@ -131,5 +131,82 @@ section{
     background: #2563eb;
 }
 
+.project-link{
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.project-links a{
+    padding: 8px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    background: #2563eb;
+    color: white;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.project-link a:hover{
+    background: #2563eb;
+}
 
 
+/* Contact Form Styling */
+.contact-info {
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #94a3b8;
+}
+
+.contact-info a {
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background: #020617;
+    color: white;
+    outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border: 1px solid #38bdf8;
+}
+
+.contact-form button {
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background: #2563eb;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: #1d4ed8;
+    transform: scale(1.03);
+}
+
+.success-msg {
+    display: none;
+    margin-top: 10px;
+    color: #22c55e;
+}
+
+#contact h3{
+    margin-top: 20px;
+}

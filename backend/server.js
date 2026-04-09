@@ -25,6 +25,13 @@ app.get("/",(req, res) => {
 app.post("/contact",async (req, res) => {
     const{ name, email, message } = req.body;
 
+    if(!name || !email || !message){
+        return res.json({
+            success: false,
+            message: "All fields are required!!"
+        });
+    }
+
     try{
         const mailOptions = {
       from: email,

@@ -12,9 +12,21 @@ function showSection(sectionId, btn){
 }
 
 async function sendMessage() {
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const message = document.getElementById("message").value;
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    if(!name || !email || !message){
+        alert("Please fill in all the fields!!!");
+        return;
+    }
+
+    const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+    if(!email.match(emailPattern)){
+        arlert("Enter a valid email address!");
+        return;
+    }
 
     const response = await fetch("http://localhost:5000/contact", {
         method: "POST",
@@ -26,6 +38,8 @@ async function sendMessage() {
 
     const data = await response.json();
     alert(data.message);
+
+    document.getElementById("success-msg").style.display = "block";
         
     
 }
