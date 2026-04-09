@@ -130,6 +130,10 @@ section{
 .top-nav button.active-btn{
     background: #2563eb;
 }
+.home a {
+    color: #38bdf8;
+    text-decoration: none;
+}
 
 .project-link{
     margin-top: 10px;
