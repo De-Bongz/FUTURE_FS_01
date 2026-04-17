@@ -28,7 +28,7 @@ async function sendMessage() {
         return;
     }
 
-    const response = await fetch("https://future-fs-01-la1t.onrender.com", {
+    const response = await fetch("https://future-fs-01-la1t.onrender.com/api/contact", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
