@@ -5,7 +5,7 @@ Welcome to my personal portfolio website! This project showcases my skills, proj
 ---
 
 ## 🚀 Live Demo
-👉 
+👉 https://de-bongz.github.io/FUTURE_FS_01/
 
 ---
 
@@ -49,10 +49,10 @@ This is a responsive and interactive portfolio website built to present my work,
 
 ```
 portfolio/ 
-   ├── frontend/
-   │ ├── index.html
-   │ ├── style.css 
-   │ └── script.js 
+   
+   ├── index.html
+   ├── style.css 
+   └── script.js 
    └── backend/ 
    | ├── server.js 
    | ├── package.json
