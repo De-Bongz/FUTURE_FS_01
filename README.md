@@ -63,25 +63,25 @@ portfolio/
 ## ⚙️ Setup & Installation
 
 ### 1. Clone the repository
-
+```
    git clone https://github.com/De-Bongz/FUTURE_FS_01.git⁠�
-
+```
 ### 2. Navigate to backend
-
+```
    cd backend
-
+```
 ### 3. Install dependencies
-
+```
    npm install
-
+```
 ### 4. Run the server
-
+```
    node server.js
-
+```
 ### 5. Open frontend
-
+```
 Open `index.html` in your browser
-
+```
 ---
 
 ## 🔐 Environment Setup (IMPORTANT)
@@ -90,9 +90,10 @@ To enable email functionality:
 
 - Create a Gmail App Password
 - Replace credentials in `server.js`:
-
-user: "your-email@gmail.com", pass: "your-app-password"
-
+```
+user: "your-email@gmail.com"
+pass: "your-app-password"
+```
 
 ---
 
