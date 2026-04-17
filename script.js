@@ -50,6 +50,10 @@ async function sendMessage() {
 
     if(data.success){
         document.getElementById("success-msg").style.display = "block";
+
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("message").value = "";
     }
 
     
