@@ -47,6 +47,7 @@ This is a responsive and interactive portfolio website built to present my work,
 
 ## 📂 Project Structure
 
+```
 portfolio/ 
    ├── frontend/
    │ ├── index.html
@@ -55,7 +56,7 @@ portfolio/
    └── backend/ 
    | ├── server.js 
    | ├── package.json
-   '''
+   ```
    
 ---
 
