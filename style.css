@@ -7,6 +7,10 @@ body{
     background: radial-gradient(circle at top right, #1e293b, #020617);
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 #home{
     z-index: 4;
 }
