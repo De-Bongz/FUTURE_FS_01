@@ -6,26 +6,8 @@ body {
     text-align: center;
 }
 
-<<<<<<< HEAD
 html {
     scroll-behavior: smooth;
-=======
-html{
-    scroll-behavior: smooth;
-}
-
-#home{
-    z-index: 4;
-}
-#aboutMe{
-    z-index: 3;
-}
-#projects{
-    z-index: 2;
-}
-#contacts{
-    z-index: 1;
->>>>>>> 66c6f787245fa6dbc1a17c2aeb4d58d1c19dea45
 }
 
 /* Section layering */
@@ -48,11 +30,7 @@ section {
 .card {
     position: absolute;
     width: 100%;
-<<<<<<< HEAD
     max-width: 500px; /* fixed typo */
-=======
-    max- width: 500px;
->>>>>>> 66c6f787245fa6dbc1a17c2aeb4d58d1c19dea45
     background: #1e293b;
     padding: 30px;
     border-radius: 15px;
@@ -91,10 +69,6 @@ section {
 /* Layout */
 .container {
     display: flex;
-<<<<<<< HEAD
-=======
-    height: 100vh;
->>>>>>> 66c6f787245fa6dbc1a17c2aeb4d58d1c19dea45
     min-height: 100vh;
 }
 
@@ -173,10 +147,6 @@ section {
     display: flex;
     gap: 15px;
     flex-wrap: wrap; /* important for mobile */
-<<<<<<< HEAD
-=======
-
->>>>>>> 66c6f787245fa6dbc1a17c2aeb4d58d1c19dea45
 }
 
 .project-links a {
@@ -269,10 +239,5 @@ section {
 
 #contact h3 {
     margin-top: 20px;
-<<<<<<< HEAD
     color: #38bdf8;
 }
-=======
-}
-
->>>>>>> 66c6f787245fa6dbc1a17c2aeb4d58d1c19dea45
