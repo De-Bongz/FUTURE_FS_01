@@ -249,13 +249,12 @@ section{
     /* FIX CARD OVERLAP */
     .card {
         position: relative !important;
-        width: 100% !important;
+        width: 100%;
         max-width: 100% !important;
-        margin: 20px 0;
+        margin: 0;
         left: 0 !important;
         top: 0 !important;
         transform: none !important;
-        margin: 10px 0;
     }
 
     /* Fix navigation */
