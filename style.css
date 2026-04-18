@@ -32,7 +32,8 @@ section{
 
 .card{
     position: absolute;
-    width: 400px;
+    width: 100%;
+    max- width: 500px;
     background: #1e293b;
     padding: 30px;
     border-radius: 15px;
@@ -68,6 +69,7 @@ section{
 .container{
     display: flex;
     height: 100vh;
+    min-height: 100vh;
 }
 
 /* side bar */
@@ -139,6 +141,8 @@ section{
     margin-top: 10px;
     display: flex;
     gap: 15px;
+    flex-wrap: wrap; /* important for mobile */
+
 }
 
 .project-links a{
