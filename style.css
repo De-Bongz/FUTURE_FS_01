@@ -223,32 +223,41 @@ section{
 
 @media (max-width: 768px) {
 
+    /* Stack layout */
     .container {
         flex-direction: column;
-        height: auto;
+        min-height: auto;
     }
 
+    /* Sidebar becomes top section */
     .sidebar {
         width: 100%;
         padding: 20px;
     }
 
+    /* Content below sidebar */
     .content {
-        padding: 20px;
-        align-items: flex-start;
+        width: 100%;
+        padding: 15px;
+        display: block;
     }
 
+    /* FIX CARD OVERLAP */
+    .card {
+        position: relative !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 20px 0;
+        left: 0 !important;
+        top: 0 !important;
+        transform: none !important;
+    }
+
+    /* Fix navigation */
     .top-nav {
         position: static;
-        margin-bottom: 20px;
-    }
-
-    /* 🔥 IMPORTANT FIX */
-    .card {
-        position: relative;   /* remove absolute */
-        width: 100%;          /* full width */
-        max-width: 100%;      
-        margin-bottom: 20px;
+        margin-bottom: 15px;
+        text-align: center;
     }
 
 }
