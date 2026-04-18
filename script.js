@@ -7,8 +7,14 @@ function showSection(sectionId, btn){
     });
     buttons.forEach(button => button.classList.remove("active-btn"));
 
-    document.getElementById(sectionId).classList.add("active");
+    const activeSection = document.getElementById(sectionId);
+    activeSection.classList.add("active");
     btn.classList.add("active-btn");
+
+    activeSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
 }
 
 async function sendMessage() {
