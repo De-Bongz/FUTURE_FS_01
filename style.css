@@ -239,16 +239,15 @@ section {
     color: #38bdf8;
 }
 
-/* 📱 Mobile responsiveness */
 /* 📱 Mobile-only overrides */
 @media (max-width: 768px) {
     .container {
         flex-direction: column; /* stack sidebar above content */
-        height: auto; /* let content flow naturally */
+        height: auto;
     }
 
     .sidebar {
-        width: 100%; /* full width on mobile */
+        width: 100%;
         padding: 20px;
         border-bottom: 1px solid #1e293b;
     }
@@ -264,16 +263,16 @@ section {
     }
 
     .card {
-        position: relative; /* override absolute only on mobile */
+        position: relative !important; /* override absolute only on mobile */
         max-width: 100%;
         margin: 20px auto;
-        transform: none; /* reset transforms so they don’t overlap */
-        opacity: 1;
-        pointer-events: auto;
+        transform: none !important; /* reset transforms */
+        opacity: 1 !important; /* keep visible */
+        pointer-events: auto !important;
     }
 
     .top-nav {
-        position: static; /* move nav into flow */
+        position: static;
         margin-bottom: 20px;
         text-align: center;
     }
