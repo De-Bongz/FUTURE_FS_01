@@ -22,11 +22,11 @@ app.get("/",(req, res) => {
 });
 
 //contact route
-app.post("/contact",async (req, res) => {
+app.post("/api/contact",async (req, res) => {
     const{ name, email, message } = req.body;
 
     if(!name || !email || !message){
-        return res.json({
+        return res.status(400).json({
             success: false,
             message: "All fields are required!!"
         });
@@ -55,7 +55,9 @@ app.post("/contact",async (req, res) => {
     }
 });
 
-app.listen(5000, () => {
-    console.log("Server running on http://localhost:5000");
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+    console.log('Server running on port ${PORT} ');
 });
    

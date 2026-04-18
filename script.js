@@ -7,8 +7,14 @@ function showSection(sectionId, btn){
     });
     buttons.forEach(button => button.classList.remove("active-btn"));
 
-    document.getElementById(sectionId).classList.add("active");
-    btn.classList.add(active-btn);
+    const activeSection = document.getElementById(sectionId);
+    activeSection.classList.add("active");
+    btn.classList.add("active-btn");
+
+    activeSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
 }
 
 async function sendMessage() {
@@ -24,11 +30,11 @@ async function sendMessage() {
     const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 
     if(!email.match(emailPattern)){
-        arlert("Enter a valid email address!");
+        alert("Enter a valid email address!");
         return;
     }
 
-    const response = await fetch("http://localhost:5000/contact", {
+    const response = await fetch("https://future-fs-01-la1t.onrender.com/api/contact", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -36,10 +42,25 @@ async function sendMessage() {
         body: JSON.stringify({ name, email, message })
     });
 
-    const data = await response.json();
+    const text = await response.text();
+
+    let data;
+    try{
+        data = JSON.parse(text);
+    }catch(e){
+        alert("Server error. Please try again later.");
+        return;
+    }
+
     alert(data.message);
 
-    document.getElementById("success-msg").style.display = "block";
-        
+    if(data.success){
+        document.getElementById("success-msg").style.display = "block";
+
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("message").value = "";
+    }
+
     
 }
