@@ -267,8 +267,15 @@ section {
         max-width: 100%;
         margin: 20px auto;
         transform: none !important; /* reset transforms */
-        opacity: 1 !important; /* keep visible */
+        opacity: 0 !important; /* keep visible */
         pointer-events: auto !important;
+        display: none;
+    }
+
+    .card.active {
+        opacity: 1 !important;
+        pointer-events: auto !important;
+        display: block !important; /* show only the active card */
     }
 
     .top-nav {
