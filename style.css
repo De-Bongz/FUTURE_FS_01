@@ -216,3 +216,35 @@ section{
 #contact h3{
     margin-top: 20px;
 }
+
+@media (max-width: 768px) {
+
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .content {
+        padding: 20px;
+        align-items: flex-start;
+    }
+
+    .top-nav {
+        position: static;
+        margin-bottom: 20px;
+    }
+
+    /* 🔥 IMPORTANT FIX */
+    .card {
+        position: relative;   /* remove absolute */
+        width: 100%;          /* full width */
+        max-width: 100%;      
+        margin-bottom: 20px;
+    }
+
+}
