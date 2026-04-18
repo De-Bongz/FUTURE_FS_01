@@ -237,8 +237,8 @@ section{
 
     /* Content below sidebar */
     .content {
-        width: 100%;
-        padding: 15px;
+        margin-top: 0;
+        padding: 10px 15px;
         display: block;
     }
 
@@ -251,6 +251,7 @@ section{
         left: 0 !important;
         top: 0 !important;
         transform: none !important;
+        margin: 10px 0;
     }
 
     /* Fix navigation */
