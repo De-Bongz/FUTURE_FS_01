@@ -1,38 +1,36 @@
-body{
-    font-family: Arial;
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
-    background: #111;
+    background: radial-gradient(circle at top right, #1e293b, #020617);
     color: white;
     text-align: center;
-    background: radial-gradient(circle at top right, #1e293b, #020617);
 }
 
-#home{
-    z-index: 4;
-}
-#aboutMe{
-    z-index: 3;
-}
-#projects{
-    z-index: 2;
-}
-#contacts{
-    z-index: 1;
+html {
+    scroll-behavior: smooth;
 }
 
-section{
+/* Section layering */
+#home { z-index: 4; }
+#aboutMe { z-index: 3; }
+#projects { z-index: 2; }
+#contacts { z-index: 1; }
+
+section {
     padding: 40px;
     max-width: 800px;
     margin: auto;
 }
 
-.active{
+.active {
     display: block;
 }
 
-.card{
+/* Card styling */
+.card {
     position: absolute;
-    width: 400px;
+    width: 100%;
+    max-width: 500px; /* fixed typo */
     background: #1e293b;
     padding: 30px;
     border-radius: 15px;
@@ -43,7 +41,19 @@ section{
     transition: all 0.4s ease;
 }
 
-.project-card{
+.card.active {
+    opacity: 1;
+    transform: translate(0) scale(1);
+    pointer-events: auto;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 12px #2563eb;
+}
+
+/* Project cards */
+.project-card {
     margin-top: 15px;
     padding: 15px;
     background: #020617;
@@ -51,27 +61,19 @@ section{
     transition: 0.3s;
 }
 
-.project-card:hover{
+.project-card:hover {
     transform: translate(-5px);
+    box-shadow: 0 0 10px #38bdf8;
 }
 
-.card.active{
-    opacity: 1;
-    transform: translate(0) scale(1);
-    pointer-events: auto;
-}
-
-.card:hover{
-    transform: scale(1.03);
-}
-
-.container{
+/* Layout */
+.container {
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
 }
 
-/* side bar */
-.sidebar{
+/* Sidebar */
+.sidebar {
     width: 250px;
     background: #020617;
     color: white;
@@ -79,18 +81,18 @@ section{
     padding: 30px 20px;
 }
 
-.profile{
+.profile {
     width: 120px;
     border-radius: 50%;
     margin-bottom: 15px;
 }
 
-.title{
+.title {
     color: #94a3b8;
     font-size: 14px;
 }
 
-.goal{
+.goal {
     font-size: 13px;
     margin-bottom: 20px;
     color: #38bdf8;
@@ -100,10 +102,16 @@ section{
     display: block;
     margin: 10px 0;
     cursor: pointer;
+    transition: 0.3s;
 }
 
-/* right side*/
-.content{
+.sidebar a:hover {
+    color: #38bdf8;
+    font-weight: bold;
+}
+
+/* Content area */
+.content {
     position: relative;
     flex: 1;
     display: flex;
@@ -113,35 +121,35 @@ section{
     align-items: center;
 }
 
-.top-nav{
+/* Top navigation */
+.top-nav {
     position: absolute;
     top: 20px;
     right: 40px;
 }
 
-.top-nav button{
+.top-nav button {
     background: #1e293b;
     color: white;
     border: none;
     border-radius: 8px;
     cursor: pointer;
+    padding: 8px 12px;
 }
 
-.top-nav button.active-btn{
+.top-nav button.active-btn {
     background: #2563eb;
 }
-.home a {
-    color: #38bdf8;
-    text-decoration: none;
-}
 
-.project-link{
+/* Project links */
+.project-links {
     margin-top: 10px;
     display: flex;
     gap: 15px;
+    flex-wrap: wrap; /* important for mobile */
 }
 
-.project-links a{
+.project-links a {
     padding: 8px 12px;
     border-radius: 8px;
     text-decoration: none;
@@ -149,16 +157,23 @@ section{
     color: white;
     font-size: 14px;
     font-weight: bold;
-    margin-right: 10px;
     transition: 0.3s;
 }
 
-.project-link a:hover{
+.project-links a:hover {
     background: #1d4ed8;
 }
 
+/* Contact section */
+.contact-card {
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    max-width: 500px;
+    margin: auto;
+}
 
-/* Contact Form Styling */
 .contact-info {
     margin-bottom: 15px;
     font-size: 14px;
@@ -184,11 +199,13 @@ section{
     background: #020617;
     color: white;
     outline: none;
+    transition: 0.3s;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
     border: 1px solid #38bdf8;
+    box-shadow: 0 0 8px #38bdf8;
 }
 
 .contact-form button {
@@ -211,8 +228,16 @@ section{
     display: none;
     margin-top: 10px;
     color: #22c55e;
+    opacity: 0;
+    transition: opacity 0.4s ease;
 }
 
-#contact h3{
+.success-msg.active {
+    display: block;
+    opacity: 1;
+}
+
+#contact h3 {
     margin-top: 20px;
+    color: #38bdf8;
 }
