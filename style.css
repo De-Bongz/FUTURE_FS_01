@@ -165,15 +165,6 @@ section {
 }
 
 /* Contact section */
-.contact-card {
-    background: #1e293b;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-    max-width: 500px;
-    margin: auto;
-}
-
 .contact-info {
     margin-bottom: 15px;
     font-size: 14px;
@@ -189,6 +180,12 @@ section {
     display: flex;
     flex-direction: column;
     gap: 12px;
+    background: #1e293b; /* card look */
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    max-width: 500px;
+    margin: auto;
 }
 
 .contact-form input,
@@ -237,7 +234,7 @@ section {
     opacity: 1;
 }
 
-#contact h3 {
+#contacts h3 {
     margin-top: 20px;
     color: #38bdf8;
 }
