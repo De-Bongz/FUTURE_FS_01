@@ -267,8 +267,8 @@ section {
         max-width: 100%;
         margin: 20px auto;
         transform: none !important; /* reset transforms */
-        opacity: 0 !important; /* keep visible */
-        pointer-events: auto !important;
+        opacity: 0; /* keep visible */
+        pointer-events: auto;
         display: none;
     }
 
