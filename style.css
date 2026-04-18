@@ -240,33 +240,47 @@ section {
 }
 
 /* 📱 Mobile responsiveness */
+/* 📱 Mobile-only overrides */
 @media (max-width: 768px) {
     .container {
-        flex-direction: column;
+        flex-direction: column; /* stack sidebar above content */
+        height: auto; /* let content flow naturally */
     }
 
     .sidebar {
-        width: 100%;
+        width: 100%; /* full width on mobile */
         padding: 20px;
+        border-bottom: 1px solid #1e293b;
+    }
+
+    .profile {
+        width: 90px; /* shrink profile picture */
     }
 
     .content {
+        flex-direction: column; /* stack cards vertically */
         padding: 20px;
+        align-items: stretch;
     }
 
     .card {
-        position: relative;
+        position: relative; /* override absolute only on mobile */
         max-width: 100%;
-        margin-top: 20px;
+        margin: 20px auto;
+        transform: none; /* reset transforms so they don’t overlap */
+        opacity: 1;
+        pointer-events: auto;
     }
 
     .top-nav {
-        position: static;
+        position: static; /* move nav into flow */
         margin-bottom: 20px;
+        text-align: center;
     }
 
     .top-nav button {
         margin: 5px;
         padding: 10px;
+        font-size: 14px;
     }
 }
