@@ -229,6 +229,7 @@ section{
 
     /* Stack layout */
     .container {
+        diplay: flex;
         flex-direction: column;
         min-height: auto;
     }
@@ -241,6 +242,7 @@ section{
 
     /* Content below sidebar */
     .content {
+        position: relative;
         margin-top: 0;
         padding: 10px 15px;
         display: block;
@@ -248,7 +250,7 @@ section{
 
     /* FIX CARD OVERLAP */
     .card {
-        position: relative !important;
+        position: absolute !important;
         width: 100%;
         max-width: 100% !important;
         margin: 0;
